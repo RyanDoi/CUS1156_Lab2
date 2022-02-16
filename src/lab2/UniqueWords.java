@@ -1,5 +1,5 @@
+package lab2;
 import java.util.ArrayList;
-
 public class UniqueWords
 {
    /**
@@ -9,15 +9,28 @@ public class UniqueWords
    */
    public static int countUnique(ArrayList<String> list)
    {
-	  int count = 0;
-	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
-      }
-	  return count;
+       //store count
+       int count = 0;
+      
+       //loop for list
+       for (int i = 0; i < list.size(); i++) {
+          
+           //check if number is unique
+           boolean unique = true;
+           //loop to check for duplicate
+           for (int j = 0; j < i; j++)
+
+           {
+               if(list.get(i)==list.get(j)) {
+                   unique = false;
+                   break;
+               }
+           }
+           if(unique) {
+               count++;
+           }
+       }
+       return count;
    }
 
    public static void main(String[] args)
