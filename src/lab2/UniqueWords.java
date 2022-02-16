@@ -10,21 +10,17 @@ public class UniqueWords
    public static int countUnique(ArrayList<String> list)
    {
        //store count
-       int count = 0;
-      
+       int count = 0;  
        //loop for list
        for (int i = 0; i < list.size(); i++) {
-          
            //check if number is unique
            boolean unique = true;
            //loop to check for duplicate
            for (int j = 0; j < i; j++)
-
            {
                if(list.get(i)==list.get(j)) {
                    unique = false;
-                   break;
-               }
+                   break;}
            }
            if(unique) {
                count++;
@@ -32,7 +28,6 @@ public class UniqueWords
        }
        return count;
    }
-
    public static void main(String[] args)
    {
       ArrayList <String> words = new ArrayList<>();
@@ -42,8 +37,7 @@ public class UniqueWords
 	  words.add("apple");
 	  words.add("orange");
 	  words.add("sun");
-	  words.add("moon");
-   
+	  words.add("moon"); 
 	  int unique = countUnique(words);
       System.out.println(words + " has " + unique + " unique words");
    }
